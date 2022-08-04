@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
   labels:
     app: nginx
+  name: nginx
 spec:
-  replicas: 5
+  replicas: 4
   selector:
     matchLabels:
       app: nginx
@@ -15,8 +15,5 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: swastik93/nginx:1
-        ports:
-        - containerPort: 80
-          protocol: TCP
+      - image: swastik93/nginx:1
+        name: nginx
