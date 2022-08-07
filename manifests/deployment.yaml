@@ -15,5 +15,5 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: swastik93/nginx:58
+      - image: swastik93/nginx:1
         name: nginx
